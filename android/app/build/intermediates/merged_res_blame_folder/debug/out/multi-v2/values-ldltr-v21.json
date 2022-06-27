@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/anhvu5/_local/crypto_exchange_demo/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ldltr-v21/values-ldltr-v21.xml",
+            "map": [
+                {
+                    "source": "/home/anhvu5/.gradle/caches/transforms-3/f2c49f26b69e9f89e6d8023e84a30064/transformed/appcompat-1.4.1/res/values-ldltr-v21/values-ldltr-v21.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "112",
+                        "endOffsets": "163"
+                    }
+                }
+            ]
+        }
+    ]
+}

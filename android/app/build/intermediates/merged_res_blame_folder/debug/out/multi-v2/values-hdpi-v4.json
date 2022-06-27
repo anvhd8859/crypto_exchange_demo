@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/anhvu5/_local/crypto_exchange_demo/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml",
+            "map": [
+                {
+                    "source": "/home/anhvu5/.gradle/caches/transforms-3/f2c49f26b69e9f89e6d8023e84a30064/transformed/appcompat-1.4.1/res/values-hdpi-v4/values-hdpi-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "6",
+                        "endColumns": "13",
+                        "endOffsets": "327"
+                    }
+                }
+            ]
+        }
+    ]
+}
