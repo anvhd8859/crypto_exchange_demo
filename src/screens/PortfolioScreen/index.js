@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, Image, FlatList } from 'react-native';
-import PortfolioCoin from '../../component/PortfolioCoin';
+import PortfolioCoin from '../../components/PortfolioCoin';
 import styles from './styles';
 const image = require('../../../assets/images/Saly-10.png');
 

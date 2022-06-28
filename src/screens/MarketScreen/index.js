@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, Image, FlatList } from 'react-native';
-import MarketCoin from '../../component/MarketCoin';
+import MarketCoin from '../../components/MarketCoin';
 import styles from './styles';
 const image = require('../../../assets/images/Saly-17.png');
 
@@ -43,8 +43,7 @@ const MarketScreen = (props) => {
                     <>
                         <Image style={styles.image} source={image} />
                         <View style={styles.balanceContainer}>
-                            <Text style={styles.title}>Portfolio balance</Text>
-                            <Text style={styles.balance}>$60.420</Text>
+                            <Text style={styles.title}>Market</Text>
                         </View>
                     </>
                 )}

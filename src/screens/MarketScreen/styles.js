@@ -9,17 +9,12 @@ const styles = StyleSheet.create({
     },
     balanceContainer: {
         width: '100%',
-        marginVertical: 20,
+        alignItems: 'center',
     },
     title: {
-        fontSize: 18,
-        color: '#777777',
-        fontWeight: 'bold',
-    },
-    balance: {
-        fontSize: 30,
-        fontWeight: 'bold',
+        fontSize: 26,
         color: '#000',
+        fontWeight: 'bold',
     },
     image: {
         height: 150,
