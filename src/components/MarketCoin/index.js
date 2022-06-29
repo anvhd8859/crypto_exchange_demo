@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, Image } from 'react-native';
+import PercentageChange from '../PercentageChange';
 import styles from './styles';
 
 const MarketCoin = ({ coin }) => {
@@ -15,14 +16,7 @@ const MarketCoin = ({ coin }) => {
             </View>
             <View style={styles.right}>
                 <Text style={styles.value}>${valueUSD}</Text>
-                <Text
-                    style={[
-                        styles.symbol,
-                        { color: valueChange > 0 ? '#4bdb00' : '#f10000' },
-                    ]}
-                >
-                    {valueChange > 0 && '+'}{valueChange}
-                </Text>
+                <PercentageChange value={valueChange} />
             </View>
         </View>
     );

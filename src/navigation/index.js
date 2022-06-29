@@ -6,6 +6,7 @@ import {
 } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import BottomNavigator from './bottom';
+import CoinDetailScreen from '../screens/CoinDetailScreen';
 
 const Navigation = ({ colorScheme }) => {
     const Stack = createStackNavigator();
@@ -14,6 +15,13 @@ const Navigation = ({ colorScheme }) => {
             theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}
         >
             <Stack.Navigator>
+                <Stack.Screen
+                    name="CoinDetail"
+                    component={CoinDetailScreen}
+                    options={{
+                        title: 'Price Data',
+                    }}
+                />
                 <Stack.Screen
                     name="Bottom Navigator"
                     component={BottomNavigator}
