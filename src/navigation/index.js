@@ -7,6 +7,8 @@ import {
 import { createStackNavigator } from '@react-navigation/stack';
 import BottomNavigator from './bottom';
 import CoinDetailScreen from '../screens/CoinDetailScreen';
+import CoinExchangeScreen from '../screens/CoinExchangeScreen';
+import WelcomeScreen from '../screens/WelcomeScreen';
 
 const Navigation = ({ colorScheme }) => {
     const Stack = createStackNavigator();
@@ -16,6 +18,20 @@ const Navigation = ({ colorScheme }) => {
         >
             <Stack.Navigator>
                 <Stack.Screen
+                    name="Welcome"
+                    component={WelcomeScreen}
+                    options={{
+                        headerShown: false,
+                    }}
+                />
+                <Stack.Screen
+                    name="Root"
+                    component={BottomNavigator}
+                    options={{
+                        headerShown: false,
+                    }}
+                />
+                <Stack.Screen
                     name="CoinDetail"
                     component={CoinDetailScreen}
                     options={{
@@ -23,10 +39,10 @@ const Navigation = ({ colorScheme }) => {
                     }}
                 />
                 <Stack.Screen
-                    name="Bottom Navigator"
-                    component={BottomNavigator}
+                    name="CoinExchange"
+                    component={CoinExchangeScreen}
                     options={{
-                        headerShown: false,
+                        title: 'Coin Exchange',
                     }}
                 />
             </Stack.Navigator>

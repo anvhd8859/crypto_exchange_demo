@@ -57,9 +57,21 @@ const styles = StyleSheet.create({
         fontSize: 22,
         color: '#000',
     },
-    button: {
-        
+    rowButton: {
+       marginTop: 'auto',
     },
+    button: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        margin: 20,
+        height: 40,
+        borderRadius: 30,
+    },
+    buttonText: {
+        fontSize: 18,
+        color: '#fff',
+    }
 });
 
 export default styles;
