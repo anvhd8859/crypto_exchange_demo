@@ -11,6 +11,9 @@ import React from 'react';
 import type { Node } from 'react';
 import Navigation from './src/navigation';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { Amplify } from 'aws-amplify';
+import awsExports from './src/aws-exports';
+Amplify.configure(awsExports);
 
 const App: () => Node = () => {
     return (

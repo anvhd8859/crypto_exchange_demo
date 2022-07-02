@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
     },
     image: {
-        height: '35%',
+        height: '40%',
         aspectRatio: 1,
         top: -2,
     },
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
         marginBottom: 20,
     },
     buttonImage: {
-        height: 70,
+        height: 60,
         resizeMode: 'contain',
     }
 });
