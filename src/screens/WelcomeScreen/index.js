@@ -21,27 +21,7 @@ const WelcomeScreen = (props) => {
         });
     }, []);
     const singInGoogle = async () => {
-        try {
-            await GoogleSignin.hasPlayServices();
-            const data = await GoogleSignin.signIn();
-            console.log(data);
-            setLoggedIn(true);
-        } catch (error) {
-            console.log(error);
-            if (error.code === statusCodes.SIGN_IN_CANCELLED) {
-                // user cancelled the login flow
-                Alert.alert('Cancel');
-            } else if (error.code === statusCodes.IN_PROGRESS) {
-                Alert.alert('Signin in progress');
-                // operation (f.e. sign in) is in progress already
-            } else if (error.code === statusCodes.PLAY_SERVICES_NOT_AVAILABLE) {
-                Alert.alert('PLAY_SERVICES_NOT_AVAILABLE');
-                // play services not available or outdated
-            } else {
-                // some other error happened
-                Alert.alert('Error, please try again');
-            }
-        }
+        // await Auth.
     };
     useEffect(() => {
         if (loggedIn) return;
