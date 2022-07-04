@@ -1,6 +1,6 @@
 export type AmplifyDependentResourcesAttributes = {
     "auth": {
-        "cryptoexchangedemo167ea3d0": {
+        "mcryptocc2a8430": {
             "IdentityPoolId": "string",
             "IdentityPoolName": "string",
             "HostedUIDomain": "string",
@@ -13,19 +13,19 @@ export type AmplifyDependentResourcesAttributes = {
             "GoogleWebClient": "string"
         }
     },
+    "api": {
+        "mcrypto": {
+            "GraphQLAPIKeyOutput": "string",
+            "GraphQLAPIIdOutput": "string",
+            "GraphQLAPIEndpointOutput": "string"
+        }
+    },
     "function": {
-        "cryptoexchangedemo167ea3d0PostConfirmation": {
+        "mcryptocc2a8430PostConfirmation": {
             "Name": "string",
             "Arn": "string",
             "LambdaExecutionRole": "string",
             "Region": "string"
-        }
-    },
-    "api": {
-        "cryptoexchangedemo": {
-            "GraphQLAPIKeyOutput": "string",
-            "GraphQLAPIIdOutput": "string",
-            "GraphQLAPIEndpointOutput": "string"
         }
     }
 }

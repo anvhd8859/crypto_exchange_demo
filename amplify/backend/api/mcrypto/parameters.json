@@ -1,10 +1,10 @@
 {
-  "AppSyncApiName": "cryptoexchangedemo",
+  "AppSyncApiName": "mcrypto",
   "DynamoDBBillingMode": "PAY_PER_REQUEST",
   "DynamoDBEnableServerSideEncryption": false,
   "AuthCognitoUserPoolId": {
     "Fn::GetAtt": [
-      "authcryptoexchangedemo167ea3d0",
+      "authmcryptocc2a8430",
       "Outputs.UserPoolId"
     ]
   }

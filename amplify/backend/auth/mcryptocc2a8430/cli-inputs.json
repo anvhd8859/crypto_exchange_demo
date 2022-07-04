@@ -1,10 +1,10 @@
 {
   "version": "1",
   "cognitoConfig": {
-    "identityPoolName": "cryptoexchangedemo167ea3d0_identitypool_167ea3d0",
+    "identityPoolName": "mcryptocc2a8430_identitypool_cc2a8430",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "crypto167ea3d0",
-    "userPoolName": "cryptoexchangedemo167ea3d0_userpool_167ea3d0",
+    "resourceNameTruncated": "mcryptcc2a8430",
+    "userPoolName": "mcryptocc2a8430_userpool_cc2a8430",
     "autoVerifiedAttributes": [
       "email"
     ],
@@ -31,10 +31,10 @@
     "userpoolClientReadAttributes": [
       "email"
     ],
-    "userpoolClientLambdaRole": "crypto167ea3d0_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "mcryptcc2a8430_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "167ea3d0",
-    "resourceName": "cryptoexchangedemo167ea3d0",
+    "sharedId": "cc2a8430",
+    "resourceName": "mcryptocc2a8430",
     "authSelections": "identityPoolAndUserPool",
     "useDefault": "manual",
     "hostedUI": true,
@@ -46,7 +46,7 @@
         "custom"
       ]
     },
-    "hostedUIDomainName": "cryptoexchange",
+    "hostedUIDomainName": "mcrypto-1fa221",
     "authProvidersUserPool": [
       "Google"
     ],
@@ -71,7 +71,7 @@
     "dependsOn": [
       {
         "category": "function",
-        "resourceName": "cryptoexchangedemo167ea3d0PostConfirmation",
+        "resourceName": "mcryptocc2a8430PostConfirmation",
         "triggerProvider": "Cognito",
         "attributes": [
           "Arn",
@@ -85,11 +85,11 @@
     ],
     "userPoolGroups": false,
     "adminQueries": false,
+    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"myapp://return/\"],\"LogoutURLs\":[\"myapp://return/\"]}",
     "parentStack": {
       "Ref": "AWS::StackId"
     },
-    "permissions": [],
-    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"myapp://return/\"],\"LogoutURLs\":[\"myapp://return/\"]}",
-    "authTriggerConnections": "[\n  {\n    \"triggerType\": \"PostConfirmation\",\n    \"lambdaFunctionName\": \"cryptoexchangedemo167ea3d0PostConfirmation\"\n  }\n]"
+    "authTriggerConnections": "[\n  {\n    \"triggerType\": \"PostConfirmation\",\n    \"lambdaFunctionName\": \"mcryptocc2a8430PostConfirmation\"\n  }\n]",
+    "permissions": []
   }
 }

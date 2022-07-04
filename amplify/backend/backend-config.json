@@ -1,12 +1,12 @@
 {
   "auth": {
-    "cryptoexchangedemo167ea3d0": {
+    "mcryptocc2a8430": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
       "dependsOn": [
         {
           "category": "function",
-          "resourceName": "cryptoexchangedemo167ea3d0PostConfirmation",
+          "resourceName": "mcryptocc2a8430PostConfirmation",
           "triggerProvider": "Cognito",
           "attributes": [
             "Arn",
@@ -39,21 +39,14 @@
       }
     }
   },
-  "function": {
-    "cryptoexchangedemo167ea3d0PostConfirmation": {
-      "build": true,
-      "providerPlugin": "awscloudformation",
-      "service": "Lambda"
-    }
-  },
   "api": {
-    "cryptoexchangedemo": {
+    "mcrypto": {
       "service": "AppSync",
       "providerPlugin": "awscloudformation",
       "dependsOn": [
         {
           "category": "auth",
-          "resourceName": "cryptoexchangedemo167ea3d0",
+          "resourceName": "mcryptocc2a8430",
           "attributes": [
             "UserPoolId"
           ]
@@ -64,7 +57,7 @@
           "defaultAuthentication": {
             "authenticationType": "AMAZON_COGNITO_USER_POOLS",
             "userPoolConfig": {
-              "userPoolId": "authcryptoexchangedemo167ea3d0"
+              "userPoolId": "authmcryptocc2a8430"
             }
           },
           "additionalAuthenticationProviders": [
@@ -72,13 +65,20 @@
               "authenticationType": "API_KEY",
               "apiKeyConfig": {
                 "apiKeyExpirationDays": 30,
-                "apiKeyExpirationDate": "2022-08-03T06:29:04.599Z",
-                "description": ""
+                "apiKeyExpirationDate": "2022-08-03T16:25:24.744Z",
+                "description": "30"
               }
             }
           ]
         }
       }
+    }
+  },
+  "function": {
+    "mcryptocc2a8430PostConfirmation": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
     }
   }
 }

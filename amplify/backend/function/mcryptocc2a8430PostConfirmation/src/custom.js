@@ -1,4 +1,3 @@
-
 const aws = require('aws-sdk');
 const ddb = new aws.DynamoDB();
 
@@ -21,7 +20,7 @@ exports.handler = async (event, context) => {
       'image': { S: event.request.userAttributes.image },
       'createdAt': { S: date.toISOString() },
       'updatedAt': { S: date.toISOString() },
-      'netWorth': {DN: '100000.0'}
+      'netWorth': { N: '100000.0' },
     },
     TableName: process.env.USERTABLE,
   }

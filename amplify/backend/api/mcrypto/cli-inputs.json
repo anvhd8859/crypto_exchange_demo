@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "mcrypto",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "D:\\project\\crypto_exchange_demo\\amplify\\backend\\api\\mcrypto\\schema.graphql",
+    "defaultAuthType": {
+      "mode": "AMAZON_COGNITO_USER_POOLS",
+      "cognitoUserPoolId": "authmcryptocc2a8430"
+    },
+    "additionalAuthTypes": [
+      {
+        "mode": "API_KEY",
+        "expirationTime": 30,
+        "apiKeyExpirationDate": "2022-08-03T16:25:24.744Z",
+        "keyDescription": "30"
+      }
+    ]
+  }
+}

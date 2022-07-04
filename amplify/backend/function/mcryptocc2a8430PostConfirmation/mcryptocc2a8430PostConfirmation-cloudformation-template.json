@@ -1,6 +1,6 @@
 {
   "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "{\"createdOn\":\"Linux\",\"createdBy\":\"Amplify\",\"createdWith\":\"9.1.0\",\"stackType\":\"function-Lambda\",\"metadata\":{}}",
+  "Description": "{\"createdOn\":\"Windows\",\"createdBy\":\"Amplify\",\"createdWith\":\"9.1.0\",\"stackType\":\"function-Lambda\",\"metadata\":{}}",
   "Parameters": {
     "GROUP": {
       "Type": "String",
@@ -67,12 +67,12 @@
         "FunctionName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "cryptoexchangedemo167ea3d0PostConfirmation",
+            "mcryptocc2a8430PostConfirmation",
             {
               "Fn::Join": [
                 "",
                 [
-                  "cryptoexchangedemo167ea3d0PostConfirmation",
+                  "mcryptocc2a8430PostConfirmation",
                   "-",
                   {
                     "Ref": "env"
@@ -122,12 +122,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "cryptoexchangedemo167ea3d0PostConfirmation",
+            "mcryptocc2a8430PostConfirmation",
             {
               "Fn::Join": [
                 "",
                 [
-                  "cryptoexchangedemo167ea3d0PostConfirmation",
+                  "mcryptocc2a8430PostConfirmation",
                   "-",
                   {
                     "Ref": "env"
