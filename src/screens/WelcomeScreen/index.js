@@ -21,7 +21,7 @@ const WelcomeScreen = (props) => {
         });
     }, []);
     const singInGoogle = async () => {
-        // await Auth.
+        await Auth.federatedSignIn({provider: 'Google'});
     };
     useEffect(() => {
         if (loggedIn) return;
