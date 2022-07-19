@@ -1,3 +1,5 @@
+import { CommonActions, useNavigation } from '@react-navigation/native';
+import { Auth } from 'aws-amplify';
 import React, { useState } from 'react';
 import { View, Text, Image } from 'react-native';
 import Pressable from 'react-native/Libraries/Components/Pressable/Pressable';
@@ -14,9 +16,18 @@ const ProfileScreen = (props) => {
         netWorth: 124000,
     });
 
-    const signOut = () => {
-        console.warn('Sign out!');
-    };
+    const navigation = useNavigation();
+
+    const signOut = async () => {
+        console.log('logout');
+        await Auth.signOut();
+        navigation.dispatch(
+            CommonActions.reset({
+                index: 0,
+                routes: [{ name: 'Welcome' }],
+            }) 
+        );
+    }
     return (
         <View style={styles.container}>
             <Image style={styles.image} source={image} />

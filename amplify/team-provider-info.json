@@ -21,7 +21,7 @@
       "function": {
         "mcryptov137e05cd3PostConfirmation": {
           "deploymentBucketName": "amplify-mcryptov1-dev-223441-deployment",
-          "s3Key": "amplify-builds/mcryptov137e05cd3PostConfirmation-7237426d72474c45315a-build.zip"
+          "s3Key": "amplify-builds/mcryptov137e05cd3PostConfirmation-6665743473477a2b6e54-build.zip"
         }
       }
     }

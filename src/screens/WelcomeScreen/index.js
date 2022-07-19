@@ -1,31 +1,48 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, Image, Pressable, Alert } from 'react-native';
 import styles from './styles';
-import {
-    GoogleSignin,
-    statusCodes
-} from '@react-native-google-signin/google-signin';
-import {Auth} from 'aws-amplify';
+import { Auth, Hub } from 'aws-amplify';
 import image from '../../../assets/images/Saly-1.png';
 import googleSignInImage from '../../../assets/images/google-button-signin.png';
+import { useNavigation, CommonActions } from '@react-navigation/native';
 
 const WelcomeScreen = (props) => {
-    const [loggedIn, setLoggedIn] = useState(false);
-    const [userInfo, setUserInfo] = useState([]);
+    const navigation = useNavigation();
+
     useEffect(() => {
-        GoogleSignin.configure({
-            scopes: ['email'], // what API you want to access on behalf of the user, default is email and profile
-            webClientId:
-                '987389567480-k216p9ej66tqgpoptjj7pvf65rcrpqc4.apps.googleusercontent.com', // client ID of type WEB for your server (needed to verify user ID and offline access)
-            offlineAccess: true, // if you want to access Google API on behalf of the user FROM YOUR SERVER
+        const fetchUser = async () => {
+            const user = await Auth.currentAuthenticatedUser();
+            if (user) {
+                console.log('user data');
+                console.log(user);
+                navigation.dispatch(
+                    CommonActions.reset({
+                        index: 0,
+                        routes: [{ name: 'Root' }],
+                    }) 
+                );
+            }
+        };
+        fetchUser();
+    }, []);
+
+    useEffect(() => {
+        Hub.listen('auth', ({ payload: { event, data } }) => {
+            if (event === 'signIn') {
+                navigation.dispatch(
+                    CommonActions.reset({
+                        index: 0,
+                        routes: [{ name: 'Root' }],
+                    }) 
+                );
+            }
         });
     }, []);
+
     const singInGoogle = async () => {
-        await Auth.federatedSignIn({provider: 'Google'});
+        await Auth.federatedSignIn({ provider: 'Google' });
     };
-    useEffect(() => {
-        if (loggedIn) return;
-    }, [loggedIn]);
+
     return (
         <View style={styles.container}>
             <Image style={styles.image} source={image} />
